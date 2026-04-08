@@ -1,12 +1,9 @@
 #include "player.hpp"
 
-#include <QBrush>
-
 Player::Player(QGraphicsItem* parent)
-    : QObject(), QGraphicsRectItem(parent), velocityY(0),velocityX(0), onGround(false) {
-  setRect(0, 0, 30, 60);
-  setBrush(Qt::red);
-  setPos(-250, 0);
+    : QObject(), QGraphicsPixmapItem(parent), velocityY(0), velocityX(0), onGround(false) {
+  setPixmap(QPixmap("assets/player.png"));
+  setPos(300, 0);
 
   setFlag(QGraphicsItem::ItemIsFocusable);
   setFocus();
